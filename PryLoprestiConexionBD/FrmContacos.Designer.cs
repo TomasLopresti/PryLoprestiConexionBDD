@@ -39,29 +39,34 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(160, 44);
+            this.btnBuscar.Location = new System.Drawing.Point(162, 66);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgvContactos
             // 
+            this.dgvContactos.AllowUserToAddRows = false;
+            this.dgvContactos.AllowUserToDeleteRows = false;
+            this.dgvContactos.AllowUserToResizeColumns = false;
+            this.dgvContactos.AllowUserToResizeRows = false;
             this.dgvContactos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvContactos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvContactos.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvContactos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContactos.Location = new System.Drawing.Point(8, 71);
+            this.dgvContactos.Location = new System.Drawing.Point(7, 95);
             this.dgvContactos.Name = "dgvContactos";
-            this.dgvContactos.Size = new System.Drawing.Size(687, 269);
+            this.dgvContactos.ReadOnly = true;
+            this.dgvContactos.RowHeadersVisible = false;
+            this.dgvContactos.Size = new System.Drawing.Size(364, 333);
             this.dgvContactos.TabIndex = 1;
             // 
             // CmbContactos
             // 
             this.CmbContactos.FormattingEnabled = true;
-            this.CmbContactos.Location = new System.Drawing.Point(8, 44);
+            this.CmbContactos.Location = new System.Drawing.Point(10, 66);
             this.CmbContactos.Name = "CmbContactos";
             this.CmbContactos.Size = new System.Drawing.Size(142, 21);
             this.CmbContactos.TabIndex = 2;
@@ -71,7 +76,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(5, 28);
+            this.label1.Location = new System.Drawing.Point(7, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 3;
@@ -83,7 +88,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Perpetua Titling MT", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(245, 9);
+            this.label2.Location = new System.Drawing.Point(67, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(250, 25);
             this.label2.TabIndex = 4;
@@ -95,7 +100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(707, 352);
+            this.ClientSize = new System.Drawing.Size(377, 440);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CmbContactos);
