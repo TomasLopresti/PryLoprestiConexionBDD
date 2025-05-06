@@ -20,33 +20,43 @@ namespace PryLoprestiConexionBD
         clsConexion BD = new clsConexion();
         private void FrmContacos_Load(object sender, EventArgs e)
         {
-            BD.CargarContactos(dgvContactos);
-            using (SqlConnection conexion = new SqlConnection(BD.cadenaConexion))
+            BD.CargarProducto(dgvContactos);
+            using (SqlConnection cn = new SqlConnection(BD.cadenaConexion))
             {
-                conexion.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Contactos", conexion);
-                SqlDataAdapter adaptador = new SqlDataAdapter(cmd);
+                cn.Open();
+                SqlDataAdapter da = new SqlDataAdapter("SELECT ID FROM Contactos", cn);
                 DataTable dt = new DataTable();
-                adaptador.Fill(dt);
-              
+                da.Fill(dt);
+
+                CmbContactos.DataSource = dt;
+                CmbContactos.DisplayMember = "ID";
+                CmbContactos.ValueMember = "ID";
             }
         }
 
-        /*private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conexion = new SqlConnection(BD.cadenaConexion))
+            int idSeleccionado = Convert.ToInt32(CmbContactos.SelectedValue);
+
+            using (SqlConnection cn = new SqlConnection(BD.cadenaConexion))
             {
-                string consulta = "SELECT * FROM Contactos WHERE ID = @ID";
-                SqlCommand comando = new SqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@ID", CmbContactos.SelectedValue);
+                cn.Open();
+                string query = "SELECT * FROM Contactos WHERE ID = @ID";
+                SqlCommand cmd = new SqlCommand(query, cn);
+                cmd.Parameters.AddWithValue("@ID", idSeleccionado);
 
-                SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable resultado = new DataTable();
-                adaptador.Fill(resultado);
+                da.Fill(resultado);
 
-                // Asumiendo que tienes un DataGridView llamado dataGridView1
                 dgvContactos.DataSource = resultado;
             }
-        }*/
+
+        }
+
+        private void btnVerTodo_Click(object sender, EventArgs e)
+        {
+            BD.CargarContactos(dgvContactos);
+        }
     }
 }

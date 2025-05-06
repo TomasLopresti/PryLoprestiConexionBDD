@@ -20,7 +20,7 @@ namespace PryLoprestiConexionBD
         clsConexion BD = new clsConexion();
         private void FrmProductos_Load(object sender, EventArgs e)
         {
-            
+            btnAgregar.Enabled = false;
             BD.CargarProducto(dgvManejo);
             using (SqlConnection conexion = new SqlConnection(BD.cadenaConexion))
             {

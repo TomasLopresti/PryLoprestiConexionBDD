@@ -34,6 +34,7 @@
             this.CmbContactos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnVerTodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // dgvContactos
             // 
@@ -94,6 +96,16 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Lista de Contactos ";
             // 
+            // btnVerTodo
+            // 
+            this.btnVerTodo.Location = new System.Drawing.Point(243, 66);
+            this.btnVerTodo.Name = "btnVerTodo";
+            this.btnVerTodo.Size = new System.Drawing.Size(75, 23);
+            this.btnVerTodo.TabIndex = 5;
+            this.btnVerTodo.Text = "Ver Todo";
+            this.btnVerTodo.UseVisualStyleBackColor = true;
+            this.btnVerTodo.Click += new System.EventHandler(this.btnVerTodo_Click);
+            // 
             // FrmContacos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,6 +113,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(377, 440);
+            this.Controls.Add(this.btnVerTodo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CmbContactos);
@@ -123,5 +136,6 @@
         private System.Windows.Forms.ComboBox CmbContactos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnVerTodo;
     }
 }
