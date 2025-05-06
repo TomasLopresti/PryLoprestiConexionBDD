@@ -38,7 +38,9 @@ namespace PryLoprestiConexionBD
                 NumCodigo.Maximum = 1000000;
                 NumCodigo.Minimum = 0;
             }
+            
         }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             controlDeDatos(TxtNombre, NumPrecio, TxtDescripción, NumPrecio, CmbCategorias);

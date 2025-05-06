@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductos));
-            this.mrcBuscar = new System.Windows.Forms.GroupBox();
             this.dgvManejo = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnDeshacer = new System.Windows.Forms.Button();
@@ -55,31 +54,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.NumPrecio)).BeginInit();
             this.SuspendLayout();
             // 
-            // mrcBuscar
-            // 
-            this.mrcBuscar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.mrcBuscar.Location = new System.Drawing.Point(218, 12);
-            this.mrcBuscar.Name = "mrcBuscar";
-            this.mrcBuscar.Size = new System.Drawing.Size(570, 47);
-            this.mrcBuscar.TabIndex = 1;
-            this.mrcBuscar.TabStop = false;
-            this.mrcBuscar.Text = "Buscar producto";
-            // 
             // dgvManejo
             // 
             this.dgvManejo.AllowUserToAddRows = false;
             this.dgvManejo.AllowUserToDeleteRows = false;
             this.dgvManejo.AllowUserToResizeColumns = false;
             this.dgvManejo.AllowUserToResizeRows = false;
+            this.dgvManejo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvManejo.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvManejo.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvManejo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvManejo.Location = new System.Drawing.Point(219, 66);
+            this.dgvManejo.Location = new System.Drawing.Point(219, 12);
             this.dgvManejo.MultiSelect = false;
             this.dgvManejo.Name = "dgvManejo";
             this.dgvManejo.ReadOnly = true;
             this.dgvManejo.RowHeadersVisible = false;
             this.dgvManejo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvManejo.Size = new System.Drawing.Size(569, 372);
+            this.dgvManejo.Size = new System.Drawing.Size(660, 426);
             this.dgvManejo.TabIndex = 2;
             this.dgvManejo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvManejo_CellClick);
             this.dgvManejo.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvManejo_CellMouseClick);
@@ -282,9 +273,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryLoprestiConexionBD.Properties.Resources.descarga;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(891, 450);
             this.Controls.Add(this.dgvManejo);
-            this.Controls.Add(this.mrcBuscar);
             this.Controls.Add(this.mrcAMEProductos);
             this.Name = "FrmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -301,7 +291,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox mrcBuscar;
         private System.Windows.Forms.DataGridView dgvManejo;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnDeshacer;
