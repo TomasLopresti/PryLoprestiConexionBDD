@@ -40,7 +40,7 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnIngresar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.ForeColor = System.Drawing.Color.Cornsilk;
@@ -105,12 +105,13 @@
             // chkMostrar
             // 
             this.chkMostrar.AutoSize = true;
+            this.chkMostrar.BackColor = System.Drawing.Color.Transparent;
             this.chkMostrar.Location = new System.Drawing.Point(12, 127);
             this.chkMostrar.Name = "chkMostrar";
             this.chkMostrar.Size = new System.Drawing.Size(118, 17);
             this.chkMostrar.TabIndex = 6;
             this.chkMostrar.Text = "Mostrar Contraseña";
-            this.chkMostrar.UseVisualStyleBackColor = true;
+            this.chkMostrar.UseVisualStyleBackColor = false;
             this.chkMostrar.CheckedChanged += new System.EventHandler(this.chkMostrar_CheckedChanged);
             // 
             // FrmUsuario
