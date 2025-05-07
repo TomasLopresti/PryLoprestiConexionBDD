@@ -120,6 +120,7 @@
             this.Controls.Add(this.CmbContactos);
             this.Controls.Add(this.dgvContactos);
             this.Controls.Add(this.btnBuscar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmContacos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contacos";

@@ -277,6 +277,7 @@
             this.ClientSize = new System.Drawing.Size(891, 450);
             this.Controls.Add(this.dgvManejo);
             this.Controls.Add(this.mrcAMEProductos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manejo de Productos";
