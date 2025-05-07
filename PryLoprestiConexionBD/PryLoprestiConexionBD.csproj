@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>d494d1a8-7a05-4448-a1d5-0fc6f397e788.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -132,6 +135,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\descarga %282%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="d494d1a8-7a05-4448-a1d5-0fc6f397e788.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
