@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.chkMostrar = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnIngresar
@@ -43,7 +44,7 @@
             this.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.ForeColor = System.Drawing.Color.Cornsilk;
-            this.btnIngresar.Location = new System.Drawing.Point(73, 150);
+            this.btnIngresar.Location = new System.Drawing.Point(69, 172);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(75, 23);
             this.btnIngresar.TabIndex = 0;
@@ -101,6 +102,17 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Ingrese Usuario y Contraseña";
             // 
+            // chkMostrar
+            // 
+            this.chkMostrar.AutoSize = true;
+            this.chkMostrar.Location = new System.Drawing.Point(12, 127);
+            this.chkMostrar.Name = "chkMostrar";
+            this.chkMostrar.Size = new System.Drawing.Size(118, 17);
+            this.chkMostrar.TabIndex = 6;
+            this.chkMostrar.Text = "Mostrar Contraseña";
+            this.chkMostrar.UseVisualStyleBackColor = true;
+            this.chkMostrar.CheckedChanged += new System.EventHandler(this.chkMostrar_CheckedChanged);
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +121,7 @@
             this.BackgroundImage = global::PryLoprestiConexionBD.Properties.Resources.abstract_3d_lines_bright_wallpaper_thumb;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(222, 207);
+            this.Controls.Add(this.chkMostrar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -119,6 +132,7 @@
             this.Name = "FrmUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión ";
+            this.Load += new System.EventHandler(this.FrmUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +146,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox chkMostrar;
     }
 }

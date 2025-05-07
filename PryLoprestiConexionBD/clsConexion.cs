@@ -115,5 +115,28 @@ namespace PryLoprestiConexionBD
                 MessageBox.Show($"No se pudo eliminar el producto: {error.Message}");
             }
         }
+
+        public bool ValidarUsuario(string usuario, string contraseña)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(cadenaConexion))
+                {
+                    string query = "SELECT COUNT(*) FROM Usuario WHERE Usuario = @Usuario AND Contraseña = @Contraseña";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@Usuario", usuario);
+                    cmd.Parameters.AddWithValue("@Contraseña", contraseña);
+                    conn.Open();
+                    int count = (int)cmd.ExecuteScalar();
+                    return count > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al validar el usuario: " + ex.Message);
+                return false;
+            }
+        }
     }
+   
 }

@@ -17,49 +17,50 @@ namespace PryLoprestiConexionBD
         {
             InitializeComponent();
         }
-
+        int intentosFallidos = 0;
+        
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text.Trim();
-            string contraseña = txtContraseña.Text.Trim();
+            string usuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Text;
 
-            // Cadena de conexión (ajústala con tus datos)
-            string cadenaConexion = "Server=TU_SERVIDOR;Database=Comercio;Trusted_Connection=True;";
+            clsConexion conexion = new clsConexion();
 
-            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            if (conexion.ValidarUsuario(usuario, contraseña))
             {
-                try
+                this.Hide();
+                FrmInicio inicio = new FrmInicio();
+                inicio.Show();
+            }
+            else
+            {
+                intentosFallidos++;
+                MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (intentosFallidos >= 3)
                 {
-                    conexion.Open();
-                    string query = "SELECT COUNT(*) FROM Usuario WHERE usuario = @usuario AND contraseña = @contraseña";
-
-                    using (SqlCommand comando = new SqlCommand(query, conexion))
-                    {
-                        comando.Parameters.AddWithValue("@usuario", usuario);
-                        comando.Parameters.AddWithValue("@contraseña", contraseña);
-
-                        int resultado = (int)comando.ExecuteScalar();
-
-                        if (resultado > 0)
-                        {
-                            // Login exitoso
-                            MessageBox.Show("¡Bienvenido!");
-                            this.Hide(); // Oculta el formulario de login
-                            FrmInicio frm = new FrmInicio(); // tu formulario principal
-                            frm.Show();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Usuario o contraseña incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error de conexión: " + ex.Message);
+                    MessageBox.Show("Ha superado el número máximo de intentos.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Application.Exit(); // Cierra toda la aplicación
                 }
             }
-        }   
+        }
+
+        private void chkMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkMostrar.Checked)
+            {
+                txtContraseña.UseSystemPasswordChar = false; // Muestra el texto
+            }
+            else
+            {
+                txtContraseña.UseSystemPasswordChar = true;  // Lo oculta
+            }
+        }
+
+        private void FrmUsuario_Load(object sender, EventArgs e)
+        {
+            txtContraseña.UseSystemPasswordChar = true;
+        }
     }
 }
 
