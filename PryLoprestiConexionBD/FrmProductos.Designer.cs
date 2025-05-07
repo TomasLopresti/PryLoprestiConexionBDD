@@ -174,6 +174,7 @@
             // 
             // CmbCategorias
             // 
+            this.CmbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbCategorias.FormattingEnabled = true;
             this.CmbCategorias.Location = new System.Drawing.Point(8, 229);
             this.CmbCategorias.Margin = new System.Windows.Forms.Padding(2);

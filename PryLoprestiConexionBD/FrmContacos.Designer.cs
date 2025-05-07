@@ -67,6 +67,7 @@
             // 
             // CmbContactos
             // 
+            this.CmbContactos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbContactos.FormattingEnabled = true;
             this.CmbContactos.Location = new System.Drawing.Point(10, 66);
             this.CmbContactos.Name = "CmbContactos";

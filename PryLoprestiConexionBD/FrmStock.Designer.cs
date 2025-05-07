@@ -43,6 +43,8 @@
             this.dgvStock.AllowUserToDeleteRows = false;
             this.dgvStock.AllowUserToResizeColumns = false;
             this.dgvStock.AllowUserToResizeRows = false;
+            this.dgvStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvStock.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvStock.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStock.Location = new System.Drawing.Point(12, 90);
@@ -51,7 +53,7 @@
             this.dgvStock.ReadOnly = true;
             this.dgvStock.RowHeadersVisible = false;
             this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStock.Size = new System.Drawing.Size(739, 348);
+            this.dgvStock.Size = new System.Drawing.Size(755, 348);
             this.dgvStock.TabIndex = 1;
             // 
             // label1
@@ -79,6 +81,7 @@
             // 
             // cmbCodigo
             // 
+            this.cmbCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCodigo.FormattingEnabled = true;
             this.cmbCodigo.Location = new System.Drawing.Point(12, 65);
             this.cmbCodigo.Name = "cmbCodigo";
@@ -111,7 +114,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PryLoprestiConexionBD.Properties.Resources.descarga__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(760, 450);
+            this.ClientSize = new System.Drawing.Size(779, 450);
             this.Controls.Add(this.btnVerTodo);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.cmbCodigo);
