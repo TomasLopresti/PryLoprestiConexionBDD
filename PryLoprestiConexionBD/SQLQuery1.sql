@@ -30,3 +30,13 @@ VALUES
     (1, 'juan.perez@email.com', '+5493511234567'),
     (2, 'maria.gomez@email.com', '+5493517654321'),
     (3, 'pedro.lopez@email.com', '+5493519876543');
+
+	CREATE TABLE usuario (
+		id INT PRIMARY KEY IDENTITY(1,1),
+		usuario VARCHAR(50) NOT NULL,
+		contraseña VARCHAR(50) NOT NULL
+);
+INSERT INTO usuario (usuario, contraseña) VALUES
+('tomas', '1234'),
+('pedro', 'pass456'),
+('juan', 'profe123');
